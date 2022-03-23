@@ -3,6 +3,7 @@ import Input from './input';
 import DropDown from './dropdown';
 import InputListTable from './itemTableList/inputListTable';
 import Orders from './orderTable'
+import Bill from './bill';
 
 
 export default function Components() {
@@ -14,6 +15,7 @@ export default function Components() {
        </div>
        <InputListTable/>
        <Orders/>
+       <Bill/>
     </>
   )
 }
