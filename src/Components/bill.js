@@ -10,7 +10,7 @@ export default function Bill() {
   const gettotal = ()=>{
     let temptotal = 0
     for (let x of orderList){
-        console.log(x.total)
+        // console.log(x.total)
         temptotal += x.item.price*x.qty;
     }
     return temptotal
@@ -25,11 +25,10 @@ export default function Bill() {
 
   useEffect(()=>setTotal(gtotal-discount), [gtotal])
 
-  console.log(gtotal-discount)
+  // console.log(gtotal-discount)
   return (
-    <>
-    <div className='text-white'>Bill</div>
-    {orderList.length>0?<>
+    orderList.length>0?<>
+      <div className='text-white'>Bill</div>
         <div className="input-group mb-1">
         <span className="input-group-text" id="basic-addon1">G. Total</span>
         <input type="number" className="form-control" aria-describedby="basic-addon1" value={gtotal} disabled={true}/>
@@ -47,7 +46,6 @@ export default function Bill() {
         </div>
         :<p className='text-danger mb-1'>Invalid Discount Entered</p>
         }</>
-        :<></>}
-    </>
+        :<></>
   )
 }

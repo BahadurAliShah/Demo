@@ -20,7 +20,7 @@ export const DeleteItemFunction = () => useContext(deleteItemContext)
 
 function reducer(items, action){
 
-  console.log("Items",items, action)
+  // console.log("Items",items, action)
     switch (action.type){
         case FuncStr["Add"]:
             if (items.findIndex(x => x.name === action.value.name) == -1 && action.value.name.length > 0)
@@ -63,7 +63,7 @@ export default function ItemsList({ children }) {
   const deleteItem = (id) => {
     dispatch({type: FuncStr["Delete"], value: { "id": id}})
   }
-  console.log(items)
+  // console.log(items)
   return (
     <itemsListContext.Provider value={items}>
       <addItemContext.Provider value={addItem}>
