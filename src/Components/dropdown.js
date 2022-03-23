@@ -1,14 +1,16 @@
 import React from 'react'
 import { ItemsListPointer } from '../Data/itemsList'
+import { AddOrderItemFunction } from '../Data/ordersList'
 
 export default function DropDown() {
     const items = ItemsListPointer()
+    const addOrderItem = AddOrderItemFunction()
 
     const listItemsDesign = (item) => {
         return (
             <li key={item.id}>
                 <a className='dropdown-item d-inline'>{item.name}</a>
-                <button type="button" className="btn btn-primary d-inline btn-sm content-right">Add</button>
+                <button type="button" className="btn btn-primary d-inline btn-sm content-right" onClick={()=>addOrderItem(item)}>Add</button>
                 <div className="dropdown-divider"></div>
             </li>
         )

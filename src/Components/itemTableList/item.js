@@ -29,7 +29,7 @@ export default function Item(props) {
 
 
   return (
-    <tr className='row'>
+    <tr className='row py-n2'>
         <td className='col-5'>{itemPtr.name}</td>
         <td className='col-7 row'>{price} </td>
     </tr>
