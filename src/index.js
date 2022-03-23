@@ -2,14 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import ItemsList from './Data/itemsList';
-import Input from './Components/input';
-import InputListTable from './Components/itemTableList/inputListTable'
+import Components from './Components/index';
 
 ReactDOM.render(
   <React.StrictMode>
     <ItemsList>
-      <Input/>
-      <InputListTable/>
+      <Components/>
     </ItemsList>
   </React.StrictMode>,
   document.getElementById('root')

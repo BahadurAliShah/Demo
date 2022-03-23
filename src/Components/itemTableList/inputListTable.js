@@ -5,8 +5,8 @@ import Item from './item';
 export default function inputListTable() {
   const items = ItemsListPointer()
   return (
-    // <div className='row'>
-      items.length>0?
+    <div className='col-8'>
+      {items.length>0?
         <table className="table caption-top text-white">
           <caption>List of Items</caption>
           <thead>
@@ -19,7 +19,7 @@ export default function inputListTable() {
             {items.map((itemI) => <Item itemPtr={itemI} key={itemI.id}/>)}
           </tbody>
         </table>
-      :<></>
-    // </div>
+      :<></>}
+    </div>
   )
 }
